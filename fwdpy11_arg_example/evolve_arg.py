@@ -105,6 +105,7 @@ def evolve_track_wrapper(args, demography, seeds):
     recregion = [fwdpy11.Region(0, 1, 1)]
     if(not(args.single_locus)):
         recregion = [fwdpy11.Region(0, args.region_breaks[0], 1),
+        			 fwdpy11.Region(args.region_breaks[0],args.region_breaks[1], 1),
         			 fwdpy11.Region(args.region_breaks[1], 1, 1)]
     
     pdict = {'nregions': [],
